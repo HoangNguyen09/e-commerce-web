@@ -54,21 +54,16 @@ const Footer = () => {
                   
                 </div>
               </div>
-              {/* <div className='footer-links d-flex flex-column'>
-                <Link className='text-white py-2 mb-1'>Demo Store</Link>
-                <Link className='text-white py-2 mb-1'>Address: ????</Link>
-                <Link className='text-white py-2 mb-1'>+01-23456789</Link>
-                <Link className='text-white py-2 mb-1'>Store@gmail.com</Link>
-              </div> */}
+            
             </div>
             <div className='col-3'>
               <h4 className='text-white mb-4'>Information</h4>
               <div className='footer-links d-flex flex-column'>
-                <Link className='text-white py-2 mb-1'>Privacy Policy</Link>
-                <Link className='text-white py-2 mb-1'>Refund Policy</Link>
-                <Link className='text-white py-2 mb-1'>Shipping Policy</Link>
-                <Link className='text-white py-2 mb-1'>Terms Of Service</Link>
-                <Link className='text-white py-2 mb-1'>Blogs</Link>
+                <Link to='/private-policy' className='text-white py-2 mb-1'>Privacy Policy</Link>
+                <Link to='/refund-policy' className='text-white py-2 mb-1'>Refund Policy</Link>
+                <Link to='/shipping-policy' className='text-white py-2 mb-1'>Shipping Policy</Link>
+                <Link to='/term-and-contions' className='text-white py-2 mb-1'>Terms Of Service</Link>
+                <Link to='/blogs' className='text-white py-2 mb-1'>Blogs</Link>
               </div>
             </div>
             <div className='col-3'>

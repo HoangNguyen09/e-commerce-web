@@ -225,10 +225,7 @@ const Home = () => {
             <ProductCard />
             <ProductCard />
             <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-
+            
           </div>
         </div>
       </section>
@@ -334,8 +331,7 @@ const Home = () => {
             </div>
             <ProductCard />
             <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            
           </div>
         </div>
       </section>
@@ -388,10 +384,20 @@ const Home = () => {
                 Our Latest Blogs
               </h3>
             </div>
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
+            <div className='row'>
+            <div className='col-3'>
+              <BlogCard/>
+            </div>
+            <div className='col-3'>
+              <BlogCard/>
+            </div>
+            <div className='col-3'>
+              <BlogCard/>
+            </div>
+            <div className='col-3'>
+              <BlogCard/>
+            </div>
+            </div>
 
           </div>
         </div>
