@@ -1,10 +1,10 @@
 import React from 'react'
 import BreadCrumb from '../components/BreadCrumb'
 import Meta from '../components/Meta'
-import StarRating from 'react-star-rating-component'
 import { useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import Color from '../components/Color'
+import StarRatingComponent from 'react-star-rating-component'
 
 const OurStore = () => {
   const [grid, setGrid] = useState(4)
@@ -128,11 +128,13 @@ const OurStore = () => {
                     <h5 >
                       Lorem ipsum dolor sit amet. Est quasi...
                     </h5>
-                    <StarRating starCount={5}
+                    <StarRatingComponent
+                     starCount={5}
                       size={24}
                       value={3}
                       edit={false}
                       activeColor='#ffd700'
+                     
                     />
                     <p className='price'>$100.00</p>
                   </div>
@@ -145,11 +147,12 @@ const OurStore = () => {
                     <h5 >
                       Lorem ipsum dolor sit amet. Est quasi...
                     </h5>
-                    <StarRating starCount={5}
+                    <StarRatingComponent starCount={5}
                       size={24}
                       value={3}
                       edit={false}
                       activeColor='#ffd700'
+                      name=''
                     />
                     <p className='price'>$100.00</p>
                   </div>

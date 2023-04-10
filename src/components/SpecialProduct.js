@@ -19,6 +19,7 @@ const SpecialProduct = () => {
                             value={3}
                             edit={false}
                             activeColor='#ffd700'
+                            name=''
                         />
                         <p className='price'><span className='red-p'>$100</span> &nbsp; <strike>$200</strike></p>
                         <div className='discount-till d-flex gap-10 align-items-center'>

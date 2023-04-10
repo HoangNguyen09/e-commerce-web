@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import BreadCrumb from '../components/BreadCrumb'
 import Meta from '../components/Meta'
 import ProductCard from '../components/ProductCard'
-import StarRatingComponent from 'react-star-rating-component'
 import ReactImageZoom from 'react-image-zoom';
 import Color from '../components/Color'
-import { TbGitCompare, TbHeartFilled,TbHeart } from 'react-icons/tb'
-import {MdOutlineLocalShipping} from 'react-icons/md'
-import {GiMaterialsScience } from 'react-icons/gi'
-import {TfiRulerAlt}from 'react-icons/tfi'
+import { TbGitCompare, TbHeartFilled, TbHeart } from 'react-icons/tb'
+import { MdOutlineLocalShipping } from 'react-icons/md'
+import { GiMaterialsScience } from 'react-icons/gi'
+import { TfiRulerAlt } from 'react-icons/tfi'
+import NumericInput from 'react-numeric-input'
+import ReactStars from 'react-rating-stars-component'
+import { Link } from 'react-router-dom';
 
 const SingleProduct = () => {
     const props = {
@@ -18,7 +20,7 @@ const SingleProduct = () => {
 
         img: "https://images-na.ssl-images-amazon.com/images/I/61I3R2ioAlL._SL1500_.jpg",
     };
-    const [orderedProduct, setorderedProduct] = useState(true)
+    // const [orderedProduct, setorderedProduct] = useState(true)
     return (
 
         <>
@@ -49,17 +51,19 @@ const SingleProduct = () => {
                                 <div className='border-bottom py-3'>
                                     <p className='price'>$ 100.00</p>
                                     <div className='d-flex align-items-center gap-10'>
-                                        <StarRatingComponent
-                                            starCount={5}
+                                         
+                                        <ReactStars
+                                            count={5}
                                             size={24}
-                                            value={3}
+                                            value={4}
                                             edit={false}
-                                            activeColor='#ffd700' />
+                                            activeColor="#ffd700"
+                                        />
                                         <p className='mb-0 t-review'>( 2 reviews )</p>
                                     </div>
                                     <a className='review-btn' href='#review'>Write a review</a>
                                 </div>
-                                <div >
+                                <div  className='py-3'>
                                     <div className='my-2 d-flex gap-10 align-items-center'>
                                         <h3 className='product-heading'>Type:</h3> <p className='product-data'>headphone</p>
                                     </div>
@@ -90,16 +94,20 @@ const SingleProduct = () => {
                                     </div>
                                     <div className='mt-2 mb-3 gap-15 align-items-center d-flex gap-10 flex-row'>
                                         <h3 className='product-heading'>quantity:</h3>
-                                        <div className=''>
-                                            <input
+                                        <div className='add-num'>
+                                            <NumericInput
                                                 type='number'
+                                                mobile
                                                 name=''
+                                                value={1}
                                                 min={1}
                                                 max={10}
                                                 className='form-control'
                                                 style={{ width: '70px' }}
                                                 id=''
+
                                             />
+
                                         </div>
                                         <div className='d-flex align-items-center gap-30 ms-5'>
                                             <button className='button border-0'>Add To Card</button>
@@ -108,68 +116,68 @@ const SingleProduct = () => {
                                     </div>
                                     <div className='d-flex align-items-center gap-15'>
                                         <div>
-                                            <a className=' me-2' href=''><TbGitCompare />Add to Compare</a>
+                                            <Link className=' me-2' href=''><TbGitCompare />Add to Compare</Link>
                                         </div>
                                         <div>
-                                            <a className=' me-2' href=''><TbHeartFilled />Add to Wishlist</a>
+                                            <Link className=' me-2' href=''><TbHeartFilled />Add to Wishlist</Link>
                                         </div>
                                     </div>
                                     <div className='my-2 d-flex gap-10 align-items-center'>
-                                        <div class="accordion " >
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" >
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                                    <MdOutlineLocalShipping /> Shipping & Returns
+                                        <div className="accordion " >
+                                            <div className="accordion-item">
+                                                <h2 className="accordion-header" >
+                                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                        <MdOutlineLocalShipping /> Shipping & Returns
                                                     </button>
                                                 </h2>
-                                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                    <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
                                                 </div>
                                             </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" >
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            <div className="accordion-item">
+                                                <h2 className="accordion-header" >
+                                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                                         <GiMaterialsScience />Material
                                                     </button>
                                                 </h2>
-                                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                                <div id="flush-collapseTwo" className="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                    <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
                                                 </div>
                                             </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" >
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                                        <TfiRulerAlt/>Dimensions
+                                            <div className="accordion-item">
+                                                <h2 className="accordion-header" >
+                                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                        <TfiRulerAlt />Dimensions
                                                     </button>
                                                 </h2>
-                                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                                <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                                    <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
                                                 </div>
                                             </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" >
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                                        <TbHeart/>Care Instructions
+                                            <div className="accordion-item">
+                                                <h2 className="accordion-header" >
+                                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                        <TbHeart />Care Instructions
                                                     </button>
                                                 </h2>
-                                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                                <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                                    <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
                                                 </div>
                                             </div>
-                                           
+
                                         </div>
-                                        
+
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div className='payment-methods d-flex gap-10 flex-column mt-2 mb-3 align-items-center'>
                                 <h5><b>Payment methods</b></h5>
                                 <div className='payment-icon'>
-                                    <img className='img-fluid' src='https://tse2.mm.bing.net/th?id=OIP.PdFuB3wexk3rOEk-PAWMeQAAAA&pid=Api&P=0'/>
+                                    <img className='img-fluid' src='https://tse2.mm.bing.net/th?id=OIP.PdFuB3wexk3rOEk-PAWMeQAAAA&pid=Api&P=0' />
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -201,7 +209,7 @@ const SingleProduct = () => {
                                     <div>
                                         <h4 className='mb-2'>Customer Review</h4>
                                         <div className='d-flex align-items-center gap-10'>
-                                            <StarRatingComponent
+                                            <ReactStars
                                                 starCount={5}
                                                 size={24}
                                                 value={3}
@@ -212,17 +220,17 @@ const SingleProduct = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    {orderedProduct && (
+                                    {/* {orderedProduct && (
                                         <div>
-                                            <a className='text-dark text-decoration-underline ' href=''>Write a Review</a>
+                                            <Link className='text-dark text-decoration-underline ' href=''>Write a Review</Link>
                                         </div>
-                                    )}
+                                    )} */}
                                 </div>
                                 <div className='review-form py-4'>
                                     <h4>Write a Review</h4>
                                     <form action='' className='d-flex flex-column gap-15' >
                                         <div>
-                                            <StarRatingComponent
+                                            <ReactStars
                                                 starCount={5}
                                                 size={24}
                                                 value={3}
@@ -241,7 +249,7 @@ const SingleProduct = () => {
                                     <div className='review'>
                                         <div className='d-flex gap-10 align-items-center'>
                                             <h6 className='mb-0'>Rosia</h6>
-                                            <StarRatingComponent
+                                            <ReactStars
                                                 starCount={5}
                                                 size={24}
                                                 value={3}

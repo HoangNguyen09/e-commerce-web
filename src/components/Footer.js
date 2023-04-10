@@ -14,12 +14,12 @@ const Footer = () => {
               </div>
             </div>
             <div className='col-7'>
-            <div class="input-group">
-                <input type="text" class="form-control py-1"
+            <div className="input-group">
+                <input type="text" className="form-control py-1"
                   placeholder="Your Email Address"
                   aria-label="Your Email Address"
                   aria-describedby="basic-addon2" />
-                <span class="input-group-text py-2" id="basic-addon2">SUBSCRIBE</span>
+                <span className="input-group-text py-2" id="basic-addon2">SUBSCRIBE</span>
               </div>
             </div>
           </div>
@@ -36,8 +36,8 @@ const Footer = () => {
                   Đà Nẵng <br/>Việt Nam<br/>
                   PinCode: 550 000
                 </address>
-                <a class="text-white mt-3 d-block mb-2 " href="tel: +01 23456789">+01-23456789</a>
-                <a class="text-white mt-4 d-block mb-0" href="mailto: Example@gmail.com">Example@gmail.com</a>
+                <a className="text-white mt-3 d-block mb-2 " href="tel: +01 23456789">+01-23456789</a>
+                <a className="text-white mt-4 d-block mb-0" href="mailto: Example@gmail.com">Example@gmail.com</a>
                 <div className='social_icons d-flex align-items-center gap-30 mt-4'>
                   <a className='text-white' href=''>
                     <BsLinkedin  className='fs-4'/>

@@ -868,22 +868,13 @@ margin-bottom: 0px;
   font-size: 13px;
   color: var(--color-777777);
 }
-.cart-col-1 {
-  width: 40%;
+.add-num .form-control{
+  border: none;
+  background-color: none;
+  height: 40px;
+  width: 100px;
 }
-.cart-col-1 p {
-  color: var(--color-777777);
-  font-size: 14px;
-}
-.cart-col-2 {
-  width: 10%;
-}
-.cart-col-3 {
-  width: 15%;
-}
-.cart-col-4 {
-  width: 15%;
-}
+
 .cart-data h5.price {
   font-size: 14px;
   color: var(--color-1c1c1b);
